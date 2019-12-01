@@ -2,8 +2,8 @@ name:                aoc2019
 version:             0.1.0.0
 github:              "githubuser/aoc2019"
 license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
+author:              "Ryan Butler"
+maintainer:          "contact@rbutler.io"
 copyright:           "2019 Author name here"
 
 extra-source-files:
@@ -35,6 +35,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - aoc2019
+    - timeit
 
 tests:
   aoc2019-test:
@@ -46,3 +47,4 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - aoc2019
+    - timeit
