@@ -1,7 +1,7 @@
 module Main where
 
-import Day01.Part1 as D1P1
+import qualified Day01 as Day01
 
 main :: IO ()
 main = do
-  D1P1.run
+  Day01.run2
