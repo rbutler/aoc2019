@@ -21,6 +21,9 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- array
+- timeit
+- split
 
 library:
   source-dirs: src
@@ -36,6 +39,7 @@ executables:
     dependencies:
     - aoc2019
     - timeit
+    - array
 
 tests:
   aoc2019-test:

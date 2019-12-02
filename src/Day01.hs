@@ -10,8 +10,9 @@ type Mass = Double
 
 -- | Read the input file (and handle the +)
 input :: [Mass]
-input = (map processLine . inputRaw) "input/Day01.txt" where
-  processLine line = read line
+input = (map processLine . inputRaw) "input/Day01.txt"
+  where
+    processLine line = read line
   -- processLine line@(sign:number)
     -- | sign == '+' = read number
     -- | otherwise = read line
