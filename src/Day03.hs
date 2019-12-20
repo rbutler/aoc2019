@@ -9,7 +9,7 @@ import Data.Array.IArray
 import Data.List.Split
 import Debug.Trace
 
-import qualified Data.Map as Map
+import qualified Data.Map.Strict as Map
 
 data Motion = Motion Direction Int
   deriving (Eq, Read, Show)
@@ -18,6 +18,8 @@ data Direction = U | D | L | R
   deriving (Eq, Read, Show)
 
 type Coord = (Int, Int)
+
+type CoordMap = Data.Map Coord Bool
 
 dirToAction :: Direction -> Coord
 dirToAction U = (0, -1)
@@ -45,7 +47,11 @@ input = (map (map processLine . splitLine) . inputRaw) "input/Day03.txt"
     processLine [] = error "No input"
     splitLine = splitOn ","
 
+addMotion :: CoordMap -> Coord -> Motion -> CoordMap
+addMotion coords current mot =
+
 run1 :: IO ()
 run1 = do
-  result <- evaluate $ input
+  let map1 = foldr addMotion (Map.empty :: CoordMap) (first input)
+  --result <- evaluate $ input
   print result
