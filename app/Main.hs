@@ -6,4 +6,4 @@ import qualified Day03 as Day03
 
 main :: IO ()
 main = do
-  Day03.run1
+  Day03.run2
